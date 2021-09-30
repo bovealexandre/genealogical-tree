@@ -1,0 +1,7 @@
+#import "./FamilyFragment.gql"
+
+query Families {
+  Families {
+    ...Families
+  }
+}

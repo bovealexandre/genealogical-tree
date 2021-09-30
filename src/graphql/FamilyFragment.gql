@@ -1,0 +1,8 @@
+fragment Families on Families {
+    family_id
+    family_name
+    family_details
+    family_description
+    family_date_to
+    family_date_from
+}

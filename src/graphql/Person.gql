@@ -1,0 +1,7 @@
+#import "./PersonFragment.gql"
+
+query Person {
+  Person {
+    ...Person
+  }
+}
