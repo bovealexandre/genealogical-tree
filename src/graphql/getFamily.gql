@@ -1,0 +1,10 @@
+#import "./PersonFragment.gql"
+
+query Family {
+  Family {
+    ...Person,
+    children(individual_id: ID!): [Person] {
+      ...Person
+    }
+  }
+}
