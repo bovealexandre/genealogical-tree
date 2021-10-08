@@ -1,7 +1,7 @@
 #import "./FamilyFragment.gql"
 
-query Families {
-  Families {
-    ...Families
+query families {
+  families {
+    ...families
   }
 }

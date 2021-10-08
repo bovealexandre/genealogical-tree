@@ -1,10 +1,7 @@
 #import "./PersonFragment.gql"
 
-query Family {
-  Family {
-    ...Person,
-    children(individual_id: ID!): [Person] {
-      ...Person
-    }
+query getFamily($id:String) {
+  getFamily(id:$id) {
+    ...Person
   }
 }

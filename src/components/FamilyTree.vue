@@ -4,9 +4,9 @@
       :tree="tree"
       @card-click="cardClick"
     >
-        <template v-slot:card="{item}">
+        <!-- <template v-slot:card="{item}">
             {{ item.name }}
-        </template>
+        </template> -->
     </VueFamilyTree>
   </div>
 </template>
@@ -14,13 +14,20 @@
 <script>
 import VueFamilyTree from 'vue-family-tree';
 
+import GETFAMILIES from '@/graphql/getFamily.gql';
+
 export default {
-  name: 'App',
+  name: 'FamilyTreeComponent',
   components: {
     VueFamilyTree,
   },
+  created() {
+    this.id = this.$route.params.family_id;
+  },
   data() {
     return {
+      id: '',
+      getFamily: [],
       tree: [{
         firstPerson: {
           name: 'John Walker',
@@ -105,6 +112,16 @@ export default {
   methods: {
     cardClick(item) {
       console.log(item);
+    },
+  },
+  apollo: {
+    getFamily: {
+      query: GETFAMILIES,
+      variables() {
+        return {
+          id: this.id,
+        };
+      },
     },
   },
 };

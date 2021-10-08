@@ -20,10 +20,10 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 const httpLink = new HttpLink({
-  uri: 'https://timbtrack-genealogical-tree.hasura.app/v1/graphql',
-  headers: {
-    'x-hasura-admin-secret': process.env.VUE_APP_HASURA_ADMIN_SECRET,
-  },
+  uri: process.env.VUE_APP_GRAPHQL_HTTP,
+  // headers: {
+  //   'x-hasura-admin-secret': process.env.VUE_APP_HASURA_ADMIN_SECRET,
+  // },
 });
 
 const apolloClient = new ApolloClient({

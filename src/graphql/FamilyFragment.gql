@@ -1,4 +1,4 @@
-fragment Families on Families {
+fragment families on Family {
     family_id
     family_name
     family_details

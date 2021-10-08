@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
-    <div v-if="$apollo.queries.Families.loading">
+    <div v-if="$apollo.queries.families.loading">
       Loading...
     </div>
-    <family-item v-for="family in Families" :key="family.family_id" :family="family"></family-item>
+    <family-item v-for="family in families" :key="family.family_id" :family="family"></family-item>
     <add-button></add-button>
   </div>
 </template>
@@ -19,11 +19,11 @@ export default {
   components: { FamilyItem, AddButton },
   data() {
     return {
-      Families: [],
+      families: [],
     };
   },
   apollo: {
-    Families: FAMILIES,
+    families: FAMILIES,
   },
 };
 </script>

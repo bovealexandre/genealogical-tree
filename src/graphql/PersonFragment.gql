@@ -1,12 +1,10 @@
-fragment Person on Person {
-    individual_couple: Person,
-    individual_date_of_birth: Date,
-    individual_details: String,
-    individual_gender: String,
-    individual_first_name: String,
-    individual_id: String,
-    individual_image: String,
-    individual_last_name: String,
-    individual_parent: String,
-    individual_place_of_birth: String,
+fragment Person on Individuals {
+    individual_date_of_birth,
+    individual_details,
+    individual_gender,
+    individual_first_name,
+    individual_id,
+    individual_family_id,
+    individual_last_name,
+    individual_place_of_birth,
 }
